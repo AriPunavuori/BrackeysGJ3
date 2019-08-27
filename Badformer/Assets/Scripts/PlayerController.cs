@@ -32,16 +32,17 @@ public class PlayerController : MonoBehaviour {
     }
 
     private void FixedUpdate() {
-        MoveHorizontal();
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, groundSensorDepth, LayerMask.GetMask("Ground"));
         if(hit.collider != null) {
             onGround = true;
         } else {
             onGround = false;
-        
         }
-        if(jump && onGround)
-            Jump();
+        MoveHorizontal();
+        if(onGround) {
+            if(jump)
+                Jump();
+        }     
     }
 
     void Jump() {
