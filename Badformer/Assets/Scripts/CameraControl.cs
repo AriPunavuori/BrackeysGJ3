@@ -2,17 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CameraControl : MonoBehaviour
-{
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+public class CameraControl : MonoBehaviour {
+
+    Transform target;
+
+    void Start() {
+        target = GameObject.Find("Player").transform;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+
+    void Update() {
+        transform.position = new Vector3(target.position.x, target.position.y, -10);
     }
 }
