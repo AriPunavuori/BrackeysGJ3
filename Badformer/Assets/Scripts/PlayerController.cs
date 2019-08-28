@@ -74,7 +74,15 @@ public class PlayerController : MonoBehaviour {
     }
 
     void MoveHorizontal() {
-        rb.velocity = new Vector2(horizontalInput * moveSpeed * Time.fixedDeltaTime, rb.velocity.y);
+        float trueSpeed = moveSpeed;
+        if(ps == Playerstate.Slowdown) {
+            trueSpeed = moveSpeed / 5;
+        } else if(ps == Playerstate.Speedboost) {
+            trueSpeed = moveSpeed * 2;
+        } else if (ps == Playerstate.MessUp) {
+            trueSpeed = -trueSpeed;
+        }
+        rb.velocity = new Vector2(horizontalInput * trueSpeed * Time.fixedDeltaTime, rb.velocity.y);
         Flip();
     }
 
