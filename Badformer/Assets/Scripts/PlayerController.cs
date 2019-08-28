@@ -7,7 +7,7 @@ public class PlayerController : MonoBehaviour {
     public enum Playerstate { Normal, Speedboost, Slowdown, MessUp, Jumper };
 
     float horizontalInput;
-    float moveSpeed = 1000;
+    float moveSpeed = 500f;
     float jumpForce = 30f;
     float accelerationFactor = 5;
     float groundSensorDepth = 1.5f;
@@ -41,7 +41,7 @@ public class PlayerController : MonoBehaviour {
         }
 
         if(ps == Playerstate.Jumper && randomJumpTimer < 0) {
-            randomJumpTimer = Random.Range(.1f, 1f);
+            randomJumpTimer = Random.Range(.3f, 1f);
             jump = true;
         }
 
@@ -98,7 +98,6 @@ public class PlayerController : MonoBehaviour {
 
     public void EatShroom(Playerstate state) {
         ps = state;
-        
         powerupTimer = powerupTime;
     }
 }

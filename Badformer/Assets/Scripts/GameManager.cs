@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 using TMPro;
 
@@ -47,6 +48,9 @@ public class GameManager : MonoBehaviour {
         textTimer -= Time.deltaTime;
         if(textTimer < 0) {
             SetUIText("");
+        }
+        if(Input.GetKeyDown(KeyCode.R)) {
+            SceneManager.LoadScene(0);
         }
     }
 
