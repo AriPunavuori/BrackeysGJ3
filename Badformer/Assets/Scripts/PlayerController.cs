@@ -19,7 +19,7 @@ public class PlayerController : MonoBehaviour {
     
     bool facingRight = true;
     bool jump;
-    public bool onGround;
+    bool onGround;
     bool jumpButtonReleased = true;
 
     float randomJumpTimer;
