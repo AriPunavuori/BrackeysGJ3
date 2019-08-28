@@ -5,9 +5,9 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour {
 
     float horizontalInput;
-    float moveSpeed = 1250;
-    float jumpForce = 35f;
-    float accelerationFactor = 10;
+    float moveSpeed = 1000;
+    float jumpForce = 30f;
+    float accelerationFactor = 5;
     float groundSensorDepth = 1.5f;
     Rigidbody2D rb;
     
@@ -15,6 +15,10 @@ public class PlayerController : MonoBehaviour {
     bool jump;
     public bool onGround;
     bool jumpButtonReleased = true;
+
+    int speedBoost = 1;
+    float boostTime = 2f;
+    float boostTimer;
 
     void Start() {
         rb = GetComponent<Rigidbody2D>();
@@ -29,6 +33,10 @@ public class PlayerController : MonoBehaviour {
             jump = true;
             jumpButtonReleased = false;
         }
+        if(boostTimer < 0) {
+            speedBoost = 1;
+        }
+        boostTimer -= Time.deltaTime;
     }
 
     private void FixedUpdate() {
@@ -53,7 +61,7 @@ public class PlayerController : MonoBehaviour {
     }
 
     void MoveHorizontal() {
-        rb.velocity = new Vector2(horizontalInput * moveSpeed * Time.fixedDeltaTime, rb.velocity.y);
+        rb.velocity = new Vector2(horizontalInput * moveSpeed * speedBoost * Time.fixedDeltaTime, rb.velocity.y);
         Flip();
     }
 
@@ -65,5 +73,10 @@ public class PlayerController : MonoBehaviour {
             transform.localScale = new Vector3(-1, 1, 1);
             facingRight = false;
         }
+    }
+
+    public void StartSpeedBoost(int b) {
+        speedBoost = b;
+        boostTimer = boostTime;
     }
 }
