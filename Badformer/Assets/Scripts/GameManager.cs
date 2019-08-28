@@ -40,7 +40,7 @@ public class GameManager : MonoBehaviour {
         SetHealth(0);
         SetLives(0);
         SetUIText("Jiihaa");
-        GoodOrBad();
+        Randomizer();
     }
 
     void Update() {
@@ -78,26 +78,35 @@ public class GameManager : MonoBehaviour {
             SetLives(-1);
             SetHealth(healthStart);
         }
-        
     }
 
-    void GoodOrBad() {
+    void Randomizer() {
         hearths = FindObjectsOfType<Hearth>();
         coins = FindObjectsOfType<Coin>();
         shrooms = FindObjectsOfType<Shroom>();
         iUPs = FindObjectsOfType<IUP>();
 
         foreach(Coin item in coins) {
-            item.bad = (Random.value > 0.5f);
+            item.bad = Random.value > 0.5f;
         }
         foreach(Hearth item in hearths) {
-            item.bad = (Random.value > 0.5f);
+            item.bad = Random.value > 0.5f;
         }
         foreach(Shroom item in shrooms) {
-            item.bad = (Random.value > 0.5f);
+
+            var random = Random.Range(0f, 1f);
+
+            if(random > .75f)
+                item.ps = PlayerController.Playerstate.Jumper;
+            else if(random > .5f)
+                item.ps = PlayerController.Playerstate.MessUp;
+            else if(random > .25f)
+                item.ps = PlayerController.Playerstate.Slowdown;
+            else 
+                item.ps = PlayerController.Playerstate.Speedboost;
         }
         foreach(IUP item in iUPs) {
-            item.bad = (Random.value > 0.5f);
+            item.bad = Random.value > 0.5f;
         }
     }
 }

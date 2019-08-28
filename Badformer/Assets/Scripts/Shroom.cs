@@ -4,19 +4,15 @@ using UnityEngine;
 
 public class Shroom : MonoBehaviour {
 
+    public PlayerController.Playerstate ps;
     PlayerController pc;
-    public bool bad;
-   
+    
     void Start() {
         pc = FindObjectOfType<PlayerController>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
-        if(bad) {
-            pc.StartSpeedBoost(-2);
-        } else {
-            pc.StartSpeedBoost(2);
-        }
+        pc.EatShroom(ps);
         Destroy(gameObject);
     }
 }

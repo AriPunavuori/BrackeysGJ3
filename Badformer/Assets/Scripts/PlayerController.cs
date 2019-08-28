@@ -4,11 +4,15 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
 
+    public enum Playerstate { Normal, Speedboost, Slowdown, MessUp, Jumper };
+
     float horizontalInput;
     float moveSpeed = 1000;
     float jumpForce = 30f;
     float accelerationFactor = 5;
     float groundSensorDepth = 1.5f;
+
+    Playerstate ps;
     Rigidbody2D rb;
     
     bool facingRight = true;
@@ -16,9 +20,11 @@ public class PlayerController : MonoBehaviour {
     public bool onGround;
     bool jumpButtonReleased = true;
 
+    float randomJumpTimer;
+
     int speedBoost = 1;
-    float boostTime = 2f;
-    float boostTimer;
+    float powerupTime = 5f;
+    float powerupTimer;
 
     void Start() {
         rb = GetComponent<Rigidbody2D>();
@@ -33,10 +39,17 @@ public class PlayerController : MonoBehaviour {
             jump = true;
             jumpButtonReleased = false;
         }
-        if(boostTimer < 0) {
-            speedBoost = 1;
+
+        if(ps == Playerstate.Jumper && randomJumpTimer < 0) {
+            randomJumpTimer = Random.Range(.1f, 1f);
+            jump = true;
         }
-        boostTimer -= Time.deltaTime;
+
+        if(powerupTimer < 0) {
+            ps = Playerstate.Normal;
+        }
+        powerupTimer -= Time.deltaTime;
+        randomJumpTimer -= Time.deltaTime;
     }
 
     private void FixedUpdate() {
@@ -61,7 +74,7 @@ public class PlayerController : MonoBehaviour {
     }
 
     void MoveHorizontal() {
-        rb.velocity = new Vector2(horizontalInput * moveSpeed * speedBoost * Time.fixedDeltaTime, rb.velocity.y);
+        rb.velocity = new Vector2(horizontalInput * moveSpeed * Time.fixedDeltaTime, rb.velocity.y);
         Flip();
     }
 
@@ -75,8 +88,8 @@ public class PlayerController : MonoBehaviour {
         }
     }
 
-    public void StartSpeedBoost(int b) {
-        speedBoost = b;
-        boostTimer = boostTime;
+    public void EatShroom(Playerstate state) {
+        ps = state;
+        powerupTimer = powerupTime;
     }
 }
