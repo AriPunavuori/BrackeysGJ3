@@ -6,6 +6,7 @@ using TMPro;
 
 public class GameManager : MonoBehaviour {
 
+    Vector3 startpoint = new Vector3(0,0,0);
     Vector3 checkpoint;
 
     int lives;
@@ -73,6 +74,10 @@ public class GameManager : MonoBehaviour {
             SetUIText("A life was lost");
         if(l == 1)
             SetUIText("Extra life!!!");
+        if(lives < 0) {
+            SceneManager.LoadScene(0);
+            SetUIText("Game over! =(");
+        }
     }
 
     public void SetHealth(int h) {
