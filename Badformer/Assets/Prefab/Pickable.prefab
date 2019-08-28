@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6302975596188643692}
   - component: {fileID: 6302975596188643695}
   m_Layer: 10
-  m_Name: Coin
+  m_Name: Pickable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -72,8 +72,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 1109d634015058440816bce4a27363de, type: 3}
-  m_Color: {r: 0.9622642, g: 0.7648149, b: 0.004538993, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 574a00d79e1e6ed448d8d699d5732de2, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -111,7 +111,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.23
 --- !u!58 &6302975596188643695
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -127,4 +127,4 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.55
+  m_Radius: 0.24
