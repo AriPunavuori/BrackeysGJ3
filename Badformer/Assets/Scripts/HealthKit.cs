@@ -2,20 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Shroom : MonoBehaviour {
+public class HealthKit : MonoBehaviour {
 
-    public PlayerController.Playerstate ps;
-    PlayerController pc;
     GameManager gm;
+    public bool bad;
+    int healthToAdd = 10;
 
     void Start() {
-        pc = FindObjectOfType<PlayerController>();
         gm = FindObjectOfType<GameManager>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
-        pc.EatShroom(ps);
-        gm.SetUIText(ps.ToString());
+        if(bad) {
+            gm.SetHealth(-healthToAdd);
+        } else {
+            gm.SetHealth(healthToAdd);
+        }
         Destroy(gameObject);
     }
 }

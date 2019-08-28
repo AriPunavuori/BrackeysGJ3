@@ -2,22 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Coin : MonoBehaviour {
+public class Powerup : MonoBehaviour {
 
+    public PlayerController.Playerstate ps;
+    PlayerController pc;
     GameManager gm;
-    public bool bad;
-    int scoreToAdd = 50;
 
     void Start() {
+        pc = FindObjectOfType<PlayerController>();
         gm = FindObjectOfType<GameManager>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
-        if(bad) {
-            gm.SetScore(-scoreToAdd);
-        } else {
-            gm.SetScore(scoreToAdd);
-        }
+        pc.EatShroom(ps);
+        gm.SetUIText(ps.ToString());
         Destroy(gameObject);
     }
 }

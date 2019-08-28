@@ -106,4 +106,8 @@ public class PlayerController : MonoBehaviour {
         ps = state;
         powerupTimer = powerupTime;
     }
+
+    public void TeleportToCheckpoint(Vector3 c) {
+        rb.MovePosition(c);
+    }
 }

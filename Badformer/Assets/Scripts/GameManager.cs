@@ -6,6 +6,8 @@ using TMPro;
 
 public class GameManager : MonoBehaviour {
 
+    Vector3 checkpoint;
+
     int lives;
     int livesStart = 3;
     int health;
@@ -25,10 +27,10 @@ public class GameManager : MonoBehaviour {
     bool gameOver;
     bool gameWon;
 
-    Coin[] coins;
-    Hearth[] hearths;
+    Pickable[] pickables;
+    HealthKit[] healthKits;
     IUP[] iUPs;
-    Shroom[] shrooms;
+    Powerup[] powerups;
 
     void Start() {
         scoreText = GameObject.Find("ScoreText").GetComponent<TextMeshProUGUI>();
@@ -84,19 +86,23 @@ public class GameManager : MonoBehaviour {
         }
     }
 
+    public void SetCheckpoint(Vector3 c) {
+        checkpoint = c;
+    }
+
     void Randomizer() {
-        hearths = FindObjectsOfType<Hearth>();
-        coins = FindObjectsOfType<Coin>();
-        shrooms = FindObjectsOfType<Shroom>();
+        healthKits = FindObjectsOfType<HealthKit>();
+        pickables = FindObjectsOfType<Pickable>();
+        powerups = FindObjectsOfType<Powerup>();
         iUPs = FindObjectsOfType<IUP>();
 
-        foreach(Coin item in coins) {
+        foreach(Pickable item in pickables) {
             item.bad = Random.value > 0.5f;
         }
-        foreach(Hearth item in hearths) {
+        foreach(HealthKit item in healthKits) {
             item.bad = Random.value > 0.5f;
         }
-        foreach(Shroom item in shrooms) {
+        foreach(Powerup item in powerups) {
 
             var random = Random.Range(0f, 1f);
 
@@ -112,5 +118,9 @@ public class GameManager : MonoBehaviour {
         foreach(IUP item in iUPs) {
             item.bad = Random.value > 0.5f;
         }
+    }
+
+    public Vector3 Checkpoint() {
+        return checkpoint;
     }
 }

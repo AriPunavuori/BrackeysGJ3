@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Hearth : MonoBehaviour {
+public class Pickable : MonoBehaviour {
 
     GameManager gm;
     public bool bad;
-    int healthToAdd = 10;
+    int scoreToAdd = 50;
 
     void Start() {
         gm = FindObjectOfType<GameManager>();
@@ -14,9 +14,9 @@ public class Hearth : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision) {
         if(bad) {
-            gm.SetHealth(-healthToAdd);
+            gm.SetScore(-scoreToAdd);
         } else {
-            gm.SetHealth(healthToAdd);
+            gm.SetScore(scoreToAdd);
         }
         Destroy(gameObject);
     }
