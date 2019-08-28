@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Pickable : MonoBehaviour {
 
+    public AudioSource audioSource;
+    public AudioClip creditAudio;
+
     GameManager gm;
     public bool bad;
     int scoreToAdd = 50;
@@ -13,6 +16,7 @@ public class Pickable : MonoBehaviour {
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
+        audioSource.PlayOneShot(creditAudio);
         if(bad) {
             gm.SetScore(-scoreToAdd);
         } else {
