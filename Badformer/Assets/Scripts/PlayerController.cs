@@ -12,6 +12,8 @@ public class PlayerController : MonoBehaviour {
     float accelerationFactor = 5;
     float groundSensorDepth = 1.5f;
 
+    public Animator animator;
+
     Playerstate ps;
     Rigidbody2D rb;
     
@@ -32,6 +34,9 @@ public class PlayerController : MonoBehaviour {
 
     void Update() {
         horizontalInput = Input.GetAxisRaw("Horizontal");
+
+        animator.SetFloat("Speed", Mathf.Abs(horizontalInput));
+
         if(Input.GetKeyUp(KeyCode.Space)) {
             jumpButtonReleased = true;
         }
@@ -75,7 +80,7 @@ public class PlayerController : MonoBehaviour {
 
     void MoveHorizontal() {
         float trueSpeed = moveSpeed;
-        if(ps == Playerstate.Slowdown) {
+        if (ps == Playerstate.Slowdown) {
             trueSpeed = moveSpeed / 5;
         } else if(ps == Playerstate.Speedboost) {
             trueSpeed = moveSpeed * 2;
