@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour {
     float accelerationFactor = 5;
     float groundSensorDepth = 1.5f;
 
-    public Animator animator;
+    Animator animator;
 
     Playerstate ps;
     Rigidbody2D rb;
@@ -29,6 +29,7 @@ public class PlayerController : MonoBehaviour {
     float powerupTimer;
 
     void Start() {
+        animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
     }
 
