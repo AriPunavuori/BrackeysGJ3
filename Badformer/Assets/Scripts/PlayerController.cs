@@ -98,6 +98,7 @@ public class PlayerController : MonoBehaviour {
 
     public void EatShroom(Playerstate state) {
         ps = state;
+        
         powerupTimer = powerupTime;
     }
 }
