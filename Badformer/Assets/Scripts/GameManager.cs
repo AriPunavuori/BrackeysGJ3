@@ -24,8 +24,12 @@ public class GameManager : MonoBehaviour {
     bool gameOver;
     bool gameWon;
 
-    void Start() {
+    Coin[] coins;
+    Hearth[] hearths;
+    IUP[] iUPs;
+    Shroom[] shrooms;
 
+    void Start() {
         scoreText = GameObject.Find("ScoreText").GetComponent<TextMeshProUGUI>();
         healthText = GameObject.Find("HealthText").GetComponent<TextMeshProUGUI>();
         livesText = GameObject.Find("LivesText").GetComponent<TextMeshProUGUI>();
@@ -36,6 +40,7 @@ public class GameManager : MonoBehaviour {
         SetHealth(0);
         SetLives(0);
         SetUIText("Jiihaa");
+        GoodOrBad();
     }
 
     void Update() {
@@ -74,5 +79,25 @@ public class GameManager : MonoBehaviour {
             SetHealth(healthStart);
         }
         
+    }
+
+    void GoodOrBad() {
+        hearths = FindObjectsOfType<Hearth>();
+        coins = FindObjectsOfType<Coin>();
+        shrooms = FindObjectsOfType<Shroom>();
+        iUPs = FindObjectsOfType<IUP>();
+
+        foreach(Coin item in coins) {
+            item.bad = (Random.value > 0.5f);
+        }
+        foreach(Hearth item in hearths) {
+            item.bad = (Random.value > 0.5f);
+        }
+        foreach(Shroom item in shrooms) {
+            item.bad = (Random.value > 0.5f);
+        }
+        foreach(IUP item in iUPs) {
+            item.bad = (Random.value > 0.5f);
+        }
     }
 }
