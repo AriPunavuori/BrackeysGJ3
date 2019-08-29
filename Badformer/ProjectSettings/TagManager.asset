@@ -38,6 +38,18 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 3661751995
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Platform
+    uniqueID: 1269029653
+    locked: 0
+  - name: Pickups
+    uniqueID: 3122964159
+    locked: 0
+  - name: Player
+    uniqueID: 2657199539
     locked: 0
