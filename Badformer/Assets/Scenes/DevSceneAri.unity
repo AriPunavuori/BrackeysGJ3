@@ -354,7 +354,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 618994129}
-  healthAudio: {fileID: 8300000, guid: 49b40099c6e7d954e897200e49849ca5, type: 3}
+  healthAudio: {fileID: 8300000, guid: 064c20d7da3c48a48837cf40afc42b59, type: 3}
   bad: 1
 --- !u!58 &17242266
 CircleCollider2D:
@@ -3729,7 +3729,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 618994129}
-  healthAudio: {fileID: 8300000, guid: 49b40099c6e7d954e897200e49849ca5, type: 3}
+  healthAudio: {fileID: 8300000, guid: 064c20d7da3c48a48837cf40afc42b59, type: 3}
   bad: 1
 --- !u!58 &1048484662
 CircleCollider2D:
