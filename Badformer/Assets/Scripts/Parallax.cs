@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Parallax : MonoBehaviour {
 
-    public float parallaxEffect;
+    public float horizontalParallax;
+    public float verticalParallax;
     float length;
     float camPevPosX;
     float camStartPosX;
@@ -16,8 +17,8 @@ public class Parallax : MonoBehaviour {
     }
 
     void Update() {
-        transform.position += new Vector3((cam.transform.position.x - camPevPosX) * parallaxEffect, transform.position.y, transform.position.z);
-        //transform.position = new Vector3(transform.position.x, cam.transform.position.y, transform.position.x);
+        transform.position += new Vector3((cam.transform.position.x - camPevPosX) * horizontalParallax, transform.position.y, transform.position.z);
+        transform.position = new Vector3(transform.position.x, cam.transform.position.y * verticalParallax, transform.position.x);
         camPevPosX = cam.transform.position.x;
         if(cam.transform.position.x > transform.position.x + length * 1.5f)
             transform.position += new Vector3(length * 3, 0, 0);

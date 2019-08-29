@@ -320,7 +320,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 842e78bd501af4ab288ffb3cc229501d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parallaxEffect: 0.5
+  horizontalParallax: 0.4
+  verticalParallax: 0.94
 --- !u!1 &17242264
 GameObject:
   m_ObjectHideFlags: 0
@@ -1491,7 +1492,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 842e78bd501af4ab288ffb3cc229501d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parallaxEffect: 0.9
+  horizontalParallax: 0.8
+  verticalParallax: 0.98
 --- !u!212 &441333798
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1997,7 +1999,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 842e78bd501af4ab288ffb3cc229501d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parallaxEffect: 0.5
+  horizontalParallax: 0.4
+  verticalParallax: 0.94
 --- !u!212 &501905457
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2571,7 +2574,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 842e78bd501af4ab288ffb3cc229501d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parallaxEffect: 0.25
+  horizontalParallax: 0.2
+  verticalParallax: 0.92
 --- !u!212 &651248625
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2821,7 +2825,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 842e78bd501af4ab288ffb3cc229501d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parallaxEffect: 0.9
+  horizontalParallax: 0.8
+  verticalParallax: 0.98
 --- !u!4 &706683660 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6302975596188643694, guid: 95c86de67ab8541d180a9963e93ec739,
@@ -3870,7 +3875,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 842e78bd501af4ab288ffb3cc229501d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parallaxEffect: 0.9
+  horizontalParallax: 0.8
+  verticalParallax: 0.98
 --- !u!212 &1062774474
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5273,7 +5279,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 842e78bd501af4ab288ffb3cc229501d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parallaxEffect: 0.7
+  horizontalParallax: 0.6
+  verticalParallax: 0.96
 --- !u!212 &1492002733
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5474,7 +5481,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 842e78bd501af4ab288ffb3cc229501d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parallaxEffect: 0.5
+  horizontalParallax: 0.4
+  verticalParallax: 0.94
 --- !u!212 &1536083535
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5765,7 +5773,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 842e78bd501af4ab288ffb3cc229501d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parallaxEffect: 0.25
+  horizontalParallax: 0.2
+  verticalParallax: 0.92
 --- !u!1 &1654098363
 GameObject:
   m_ObjectHideFlags: 0
@@ -6047,7 +6056,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 842e78bd501af4ab288ffb3cc229501d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parallaxEffect: 0.7
+  horizontalParallax: 0.6
+  verticalParallax: 0.96
 --- !u!212 &1664003494
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6759,7 +6769,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 842e78bd501af4ab288ffb3cc229501d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parallaxEffect: 0.25
+  horizontalParallax: 0.2
+  verticalParallax: 0.92
 --- !u!212 &1889512608
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7090,7 +7101,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 842e78bd501af4ab288ffb3cc229501d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parallaxEffect: 0.7
+  horizontalParallax: 0.6
+  verticalParallax: 0.96
 --- !u!1 &2008159359
 GameObject:
   m_ObjectHideFlags: 0
@@ -8316,22 +8328,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
-    - target: {fileID: 618994129, guid: 3dab7d3ade93a46d3a965fde021dc6c6, type: 3}
-      propertyPath: BypassReverbZones
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 618994129, guid: 3dab7d3ade93a46d3a965fde021dc6c6, type: 3}
-      propertyPath: BypassListenerEffects
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 618994129, guid: 3dab7d3ade93a46d3a965fde021dc6c6, type: 3}
-      propertyPath: m_Volume
-      value: 0.801
-      objectReference: {fileID: 0}
-    - target: {fileID: 618994129, guid: 3dab7d3ade93a46d3a965fde021dc6c6, type: 3}
-      propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8504280542728879431, guid: 3dab7d3ade93a46d3a965fde021dc6c6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8385,6 +8381,22 @@ PrefabInstance:
     - target: {fileID: 8504280542728879431, guid: 3dab7d3ade93a46d3a965fde021dc6c6,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 618994129, guid: 3dab7d3ade93a46d3a965fde021dc6c6, type: 3}
+      propertyPath: BypassReverbZones
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 618994129, guid: 3dab7d3ade93a46d3a965fde021dc6c6, type: 3}
+      propertyPath: BypassListenerEffects
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 618994129, guid: 3dab7d3ade93a46d3a965fde021dc6c6, type: 3}
+      propertyPath: m_Volume
+      value: 0.801
+      objectReference: {fileID: 0}
+    - target: {fileID: 618994129, guid: 3dab7d3ade93a46d3a965fde021dc6c6, type: 3}
+      propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
