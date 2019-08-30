@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -294,8 +294,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 842e78bd501af4ab288ffb3cc229501d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  horizontalParallax: 0.6
-  verticalParallax: 0.96
 --- !u!212 &13411530
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1619,8 +1617,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 842e78bd501af4ab288ffb3cc229501d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  horizontalParallax: 0.6
-  verticalParallax: 0.96
 --- !u!212 &186352508
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2143,8 +2139,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 842e78bd501af4ab288ffb3cc229501d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  horizontalParallax: 0.6
-  verticalParallax: 0.96
 --- !u!212 &284182347
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2238,8 +2232,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 842e78bd501af4ab288ffb3cc229501d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  horizontalParallax: 0.4
-  verticalParallax: 0.94
 --- !u!212 &293810478
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3386,76 +3378,6 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 95c86de67ab8541d180a9963e93ec739, type: 3}
---- !u!1 &552954576
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 552954577}
-  - component: {fileID: 552954578}
-  m_Layer: 8
-  m_Name: Point Light 2D
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &552954577
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 552954576}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 846682146}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &552954578
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 552954576}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_LightType: 3
-  m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.5
-  m_Color: {r: 0.6415094, g: 0.5355998, b: 0.5355998, a: 1}
-  m_Intensity: 0.97
-  m_LightVolumeOpacity: 0
-  m_ApplyToSortingLayers: 00000000b3a5619e
-  m_LightCookieSprite: {fileID: 0}
-  m_UseNormalMap: 0
-  m_LightOrder: 0
-  m_AlphaBlendOnOverlap: 0
-  m_PointLightInnerAngle: 360
-  m_PointLightOuterAngle: 360
-  m_PointLightInnerRadius: 0
-  m_PointLightOuterRadius: 3.79
-  m_PointLightDistance: 3
-  m_PointLightQuality: 1
-  m_ShapeLightParametricSides: 5
-  m_ShapeLightParametricAngleOffset: 0
-  m_ShapeLightParametricRadius: 1
-  m_ShapeLightFalloffSize: 0.5
-  m_ShapeLightFalloffOffset: {x: 0, y: 0}
-  m_ShapePath:
-  - {x: -0.5, y: -0.5, z: 0}
-  - {x: 0.5, y: -0.5, z: 0}
-  - {x: 0.5, y: 0.5, z: 0}
-  - {x: -0.5, y: 0.5, z: 0}
 --- !u!1 &586452331
 GameObject:
   m_ObjectHideFlags: 0
@@ -4311,8 +4233,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 842e78bd501af4ab288ffb3cc229501d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  horizontalParallax: 0.4
-  verticalParallax: 0.94
 --- !u!212 &756439826
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4513,8 +4433,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 842e78bd501af4ab288ffb3cc229501d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  horizontalParallax: 0
-  verticalParallax: 0.9
 --- !u!212 &766989343
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4746,12 +4664,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 528689400}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &846682146 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 512716875794365588, guid: 2147bffcc44e74653921e9a917f293f7,
-    type: 3}
-  m_PrefabInstance: {fileID: 2038235506}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &863520034
 GameObject:
   m_ObjectHideFlags: 0
@@ -4796,8 +4708,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 842e78bd501af4ab288ffb3cc229501d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  horizontalParallax: 0
-  verticalParallax: 0.9
 --- !u!212 &863520037
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4891,8 +4801,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 842e78bd501af4ab288ffb3cc229501d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  horizontalParallax: 0.2
-  verticalParallax: 0.92
 --- !u!212 &871906750
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5651,8 +5559,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 842e78bd501af4ab288ffb3cc229501d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  horizontalParallax: 0.8
-  verticalParallax: 0.98
 --- !u!212 &1003772905
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6744,8 +6650,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 842e78bd501af4ab288ffb3cc229501d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  horizontalParallax: 0.8
-  verticalParallax: 0.98
 --- !u!212 &1449155180
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7122,8 +7026,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 842e78bd501af4ab288ffb3cc229501d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  horizontalParallax: 0.4
-  verticalParallax: 0.94
 --- !u!212 &1616755051
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7592,8 +7494,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 842e78bd501af4ab288ffb3cc229501d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  horizontalParallax: 0.2
-  verticalParallax: 0.92
 --- !u!212 &1790030783
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7794,8 +7694,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 842e78bd501af4ab288ffb3cc229501d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  horizontalParallax: 0.8
-  verticalParallax: 0.98
 --- !u!212 &1870018742
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8594,26 +8492,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 512716875794365589, guid: 2147bffcc44e74653921e9a917f293f7,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 512716875794365589, guid: 2147bffcc44e74653921e9a917f293f7,
-        type: 3}
-      propertyPath: m_SortingLayerID
-      value: -1637767757
-      objectReference: {fileID: 0}
-    - target: {fileID: 512716875794365589, guid: 2147bffcc44e74653921e9a917f293f7,
-        type: 3}
-      propertyPath: m_SortingLayer
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 512716875794365589, guid: 2147bffcc44e74653921e9a917f293f7,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2147bffcc44e74653921e9a917f293f7, type: 3}
 --- !u!1 &2044329313
@@ -8660,8 +8538,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 842e78bd501af4ab288ffb3cc229501d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  horizontalParallax: 0
-  verticalParallax: 0.9
 --- !u!212 &2044329316
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8755,8 +8631,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 842e78bd501af4ab288ffb3cc229501d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  horizontalParallax: 0.2
-  verticalParallax: 0.92
 --- !u!212 &2055730403
 SpriteRenderer:
   m_ObjectHideFlags: 0
