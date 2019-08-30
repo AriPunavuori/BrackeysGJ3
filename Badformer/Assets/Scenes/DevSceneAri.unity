@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -239,7 +239,7 @@ MonoBehaviour:
   m_Color: {r: 0.6933962, g: 0.9202491, b: 1, a: 1}
   m_Intensity: 0.92
   m_LightVolumeOpacity: 0
-  m_ApplyToSortingLayers: a937c14bb3a5619e15dba34bbfa624ba00000000
+  m_ApplyToSortingLayers: bbe641da0000000015dba34bbfa624bab3a5619ea937c14b
   m_LightCookieSprite: {fileID: 0}
   m_UseNormalMap: 0
   m_LightOrder: 0
@@ -416,26 +416,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 512716875794365589, guid: 2147bffcc44e74653921e9a917f293f7,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 512716875794365589, guid: 2147bffcc44e74653921e9a917f293f7,
-        type: 3}
-      propertyPath: m_SortingLayerID
-      value: -1637767757
-      objectReference: {fileID: 0}
-    - target: {fileID: 512716875794365589, guid: 2147bffcc44e74653921e9a917f293f7,
-        type: 3}
-      propertyPath: m_SortingLayer
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 512716875794365589, guid: 2147bffcc44e74653921e9a917f293f7,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2147bffcc44e74653921e9a917f293f7, type: 3}
 --- !u!1001 &1829406415114230601
