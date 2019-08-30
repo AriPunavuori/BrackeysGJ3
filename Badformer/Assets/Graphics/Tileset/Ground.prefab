@@ -106,7 +106,7 @@ Tilemap:
   - first: {x: -1, y: 0, z: 0}
     second:
       m_TileIndex: 0
-      m_TileSpriteIndex: 0
+      m_TileSpriteIndex: 1
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -124,7 +124,7 @@ Tilemap:
   m_AnimatedTiles: {}
   m_TileAssetArray:
   - m_RefCount: 1
-    m_Data: {fileID: 11400000, guid: 2e3b425fcc3d1574ca747fe020d47305, type: 2}
+    m_Data: {fileID: 11400000, guid: 798ea8ce53e3a1d40bc243aae84956f8, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: e233801170797ed47bc437d9e6ce374e, type: 2}
   - m_RefCount: 1
@@ -132,8 +132,10 @@ Tilemap:
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 008d16fe993bca64eb89b652943cb1b9, type: 2}
   m_TileSpriteArray:
-  - m_RefCount: 4
+  - m_RefCount: 3
     m_Data: {fileID: 21300000, guid: c73f3c129e5da7f489914fb2d9ad9db1, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: 21300000, guid: dd76cfb0405b4fb48ada4c4e746855c6, type: 3}
   m_TileMatrixArray:
   - m_RefCount: 4
     m_Data:
