@@ -7,7 +7,7 @@ using TMPro;
 public class GameManager : MonoBehaviour {
 
     Vector3 startpoint = new Vector3(0,0,0);
-    Vector3 checkpoint;
+    public Vector3 checkpoint;
 
     int lives;
     int livesStart = 3;

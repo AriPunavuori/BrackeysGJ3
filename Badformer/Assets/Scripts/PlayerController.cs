@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour {
     float groundSensorDepth = 1.5f;
 
     Animator animator;
-
+    GameManager gm;
     Playerstate ps;
     Rigidbody2D rb;
     
@@ -30,6 +30,7 @@ public class PlayerController : MonoBehaviour {
 
     void Start() {
         animator = GetComponent<Animator>();
+        gm = FindObjectOfType<GameManager>();
         rb = GetComponent<Rigidbody2D>();
     }
 
@@ -107,7 +108,12 @@ public class PlayerController : MonoBehaviour {
         powerupTimer = powerupTime;
     }
 
-    public void TeleportToCheckpoint(Vector3 c) {
-        rb.MovePosition(c);
+    public void TeleportToCheckpoint() {
+
+        rb.velocity = new Vector2(0, 0);
+        rb.isKinematic = true;
+        var cp = gm.Checkpoint();
+        transform.position = cp;
+        rb.isKinematic = false;
     }
 }
