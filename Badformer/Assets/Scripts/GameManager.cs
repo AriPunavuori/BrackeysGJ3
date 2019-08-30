@@ -43,7 +43,7 @@ public class GameManager : MonoBehaviour {
         SetScore(0);
         SetHealth(0);
         SetLives(0);
-        SetUIText("Jiihaa");
+        SetUIText("Run Forrest, RUN!");
         Randomizer();
     }
 
