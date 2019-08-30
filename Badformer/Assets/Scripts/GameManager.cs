@@ -7,7 +7,7 @@ using TMPro;
 public class GameManager : MonoBehaviour {
 
     Vector3 startpoint = new Vector3(0,0,0);
-    Vector3 checkpoint;
+    public Vector3 checkpoint;
 
     int lives;
     int livesStart = 3;
@@ -43,7 +43,7 @@ public class GameManager : MonoBehaviour {
         SetScore(0);
         SetHealth(0);
         SetLives(0);
-        SetUIText("Jiihaa");
+        SetUIText("Run Forrest, RUN!");
         Randomizer();
     }
 
@@ -112,13 +112,13 @@ public class GameManager : MonoBehaviour {
             var random = Random.Range(0f, 1f);
 
             if(random > .75f)
-                item.ps = PlayerController.Playerstate.Jumper;
+                item.ps = PlayerController.Playerstate.Jumparound;
             else if(random > .5f)
-                item.ps = PlayerController.Playerstate.MessUp;
+                item.ps = PlayerController.Playerstate.MessedUp;
             else if(random > .25f)
-                item.ps = PlayerController.Playerstate.Slowdown;
+                item.ps = PlayerController.Playerstate.SlowedDown;
             else 
-                item.ps = PlayerController.Playerstate.Speedboost;
+                item.ps = PlayerController.Playerstate.SpeedBoosted;
         }
         foreach(IUP item in iUPs) {
             item.bad = Random.value > 0.5f;

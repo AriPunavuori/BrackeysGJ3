@@ -4,16 +4,15 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
 
-    public enum Playerstate { Normal, Speedboost, Slowdown, MessUp, Jumper };
+    public enum Playerstate { Normal, SpeedBoosted, SlowedDown, MessedUp, Jumparound };
 
     float horizontalInput;
     float moveSpeed = 500f;
     float jumpForce = 30f;
-    float accelerationFactor = 5;
     float groundSensorDepth = 1.5f;
 
     Animator animator;
-
+    GameManager gm;
     Playerstate ps;
     Rigidbody2D rb;
     
@@ -30,6 +29,7 @@ public class PlayerController : MonoBehaviour {
 
     void Start() {
         animator = GetComponent<Animator>();
+        gm = FindObjectOfType<GameManager>();
         rb = GetComponent<Rigidbody2D>();
     }
 
@@ -46,7 +46,7 @@ public class PlayerController : MonoBehaviour {
             jumpButtonReleased = false;
         }
 
-        if(ps == Playerstate.Jumper && randomJumpTimer < 0) {
+        if(ps == Playerstate.Jumparound && randomJumpTimer < 0) {
             randomJumpTimer = Random.Range(.3f, 1f);
             jump = true;
         }
@@ -81,11 +81,11 @@ public class PlayerController : MonoBehaviour {
 
     void MoveHorizontal() {
         float trueSpeed = moveSpeed;
-        if (ps == Playerstate.Slowdown) {
+        if (ps == Playerstate.SlowedDown) {
             trueSpeed = moveSpeed / 5;
-        } else if(ps == Playerstate.Speedboost) {
+        } else if(ps == Playerstate.SpeedBoosted) {
             trueSpeed = moveSpeed * 2;
-        } else if (ps == Playerstate.MessUp) {
+        } else if (ps == Playerstate.MessedUp) {
             trueSpeed = -trueSpeed;
         }
         rb.velocity = new Vector2(horizontalInput * trueSpeed * Time.fixedDeltaTime, rb.velocity.y);
@@ -107,7 +107,12 @@ public class PlayerController : MonoBehaviour {
         powerupTimer = powerupTime;
     }
 
-    public void TeleportToCheckpoint(Vector3 c) {
-        rb.MovePosition(c);
+    public void TeleportToCheckpoint() {
+
+        rb.velocity = new Vector2(0, 0);
+        rb.isKinematic = true;
+        var cp = gm.Checkpoint();
+        transform.position = cp;
+        rb.isKinematic = false;
     }
 }
