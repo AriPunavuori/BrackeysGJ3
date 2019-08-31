@@ -7,15 +7,15 @@ public class ParallaxShifting : MonoBehaviour {
     public float verticalParallax;
     float camPevPosX;
     float camStartPosX;
-    GameObject cam;
+    GameObject player;
 
     void Start() {
-        cam = GameObject.Find("Main Camera");
+        player = GameObject.Find("Player");
     }
 
     void Update() {
-        transform.position += new Vector3((cam.transform.position.x - camPevPosX) * horizontalParallax, transform.position.y, transform.position.z);
-        transform.position = new Vector3(transform.position.x, cam.transform.position.y * verticalParallax, transform.position.x);
-        camPevPosX = cam.transform.position.x;
+        transform.position += new Vector3((player.transform.position.x - camPevPosX) * horizontalParallax, transform.position.y, transform.position.z);
+        transform.position = new Vector3(transform.position.x, player.transform.position.y * verticalParallax, transform.position.x);
+        camPevPosX = player.transform.position.x;
     }
 }
