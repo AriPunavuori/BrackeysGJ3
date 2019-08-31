@@ -70,8 +70,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1172003137
+  m_SortingLayer: 2
   m_SortingOrder: 8
   m_Sprite: {fileID: 21300000, guid: 574a00d79e1e6ed448d8d699d5732de2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -143,6 +143,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Freeform Light 2D
       objectReference: {fileID: 0}
+    - target: {fileID: 4859582672999789372, guid: 4a46fa73f5e7973479d58125277b0546,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4859582672999789372, guid: 4a46fa73f5e7973479d58125277b0546,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4859582672999789373, guid: 4a46fa73f5e7973479d58125277b0546,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -197,6 +207,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4859582672999789374, guid: 4a46fa73f5e7973479d58125277b0546,
+        type: 3}
+      propertyPath: m_ApplyToSortingLayers.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4859582672999789374, guid: 4a46fa73f5e7973479d58125277b0546,
+        type: 3}
+      propertyPath: m_LightOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4859582672999789374, guid: 4a46fa73f5e7973479d58125277b0546,
+        type: 3}
+      propertyPath: m_AlphaBlendOnOverlap
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4859582672999789374, guid: 4a46fa73f5e7973479d58125277b0546,
+        type: 3}
+      propertyPath: m_UseNormalMap
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4859582672999789374, guid: 4a46fa73f5e7973479d58125277b0546,
+        type: 3}
+      propertyPath: m_LightType
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4a46fa73f5e7973479d58125277b0546, type: 3}
