@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 740672499138806057}
   - component: {fileID: 740672499138806058}
   - component: {fileID: 740672499138806059}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: cop car
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -164,16 +164,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Freeform Light 2D (2)
       objectReference: {fileID: 0}
-    - target: {fileID: 4859582672999789372, guid: 4a46fa73f5e7973479d58125277b0546,
-        type: 3}
-      propertyPath: m_Layer
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 4859582672999789372, guid: 4a46fa73f5e7973479d58125277b0546,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4859582672999789373, guid: 4a46fa73f5e7973479d58125277b0546,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -246,23 +236,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4859582672999789374, guid: 4a46fa73f5e7973479d58125277b0546,
         type: 3}
-      propertyPath: m_LightOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4859582672999789374, guid: 4a46fa73f5e7973479d58125277b0546,
-        type: 3}
-      propertyPath: m_AlphaBlendOnOverlap
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4859582672999789374, guid: 4a46fa73f5e7973479d58125277b0546,
-        type: 3}
-      propertyPath: m_UseNormalMap
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4859582672999789374, guid: 4a46fa73f5e7973479d58125277b0546,
-        type: 3}
       propertyPath: m_LightType
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4859582672999789374, guid: 4a46fa73f5e7973479d58125277b0546,
+        type: 3}
+      propertyPath: m_FalloffIntensity
+      value: 0.211
       objectReference: {fileID: 0}
     - target: {fileID: 4859582672999789374, guid: 4a46fa73f5e7973479d58125277b0546,
         type: 3}
@@ -278,16 +258,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Color.b
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4859582672999789374, guid: 4a46fa73f5e7973479d58125277b0546,
-        type: 3}
-      propertyPath: m_FalloffIntensity
-      value: 0.211
-      objectReference: {fileID: 0}
-    - target: {fileID: 4859582672999789374, guid: 4a46fa73f5e7973479d58125277b0546,
-        type: 3}
-      propertyPath: m_LightVolumeOpacity
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4859582672999789374, guid: 4a46fa73f5e7973479d58125277b0546,
         type: 3}
@@ -318,16 +288,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Freeform Light 2D (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 4859582672999789372, guid: 4a46fa73f5e7973479d58125277b0546,
-        type: 3}
-      propertyPath: m_Layer
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 4859582672999789372, guid: 4a46fa73f5e7973479d58125277b0546,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4859582672999789373, guid: 4a46fa73f5e7973479d58125277b0546,
         type: 3}
@@ -406,23 +366,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4859582672999789374, guid: 4a46fa73f5e7973479d58125277b0546,
         type: 3}
-      propertyPath: m_LightOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4859582672999789374, guid: 4a46fa73f5e7973479d58125277b0546,
-        type: 3}
-      propertyPath: m_AlphaBlendOnOverlap
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4859582672999789374, guid: 4a46fa73f5e7973479d58125277b0546,
-        type: 3}
-      propertyPath: m_UseNormalMap
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4859582672999789374, guid: 4a46fa73f5e7973479d58125277b0546,
-        type: 3}
-      propertyPath: m_LightType
-      value: 1
+      propertyPath: m_FalloffIntensity
+      value: 0.274
       objectReference: {fileID: 0}
     - target: {fileID: 4859582672999789374, guid: 4a46fa73f5e7973479d58125277b0546,
         type: 3}
@@ -438,16 +383,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Color.b
       value: 0.3443396
-      objectReference: {fileID: 0}
-    - target: {fileID: 4859582672999789374, guid: 4a46fa73f5e7973479d58125277b0546,
-        type: 3}
-      propertyPath: m_FalloffIntensity
-      value: 0.274
-      objectReference: {fileID: 0}
-    - target: {fileID: 4859582672999789374, guid: 4a46fa73f5e7973479d58125277b0546,
-        type: 3}
-      propertyPath: m_LightVolumeOpacity
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4859582672999789374, guid: 4a46fa73f5e7973479d58125277b0546,
         type: 3}
@@ -473,16 +408,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Freeform Light 2D
-      objectReference: {fileID: 0}
-    - target: {fileID: 4859582672999789372, guid: 4a46fa73f5e7973479d58125277b0546,
-        type: 3}
-      propertyPath: m_Layer
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 4859582672999789372, guid: 4a46fa73f5e7973479d58125277b0546,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4859582672999789373, guid: 4a46fa73f5e7973479d58125277b0546,
         type: 3}
@@ -556,23 +481,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4859582672999789374, guid: 4a46fa73f5e7973479d58125277b0546,
         type: 3}
-      propertyPath: m_LightOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4859582672999789374, guid: 4a46fa73f5e7973479d58125277b0546,
-        type: 3}
-      propertyPath: m_AlphaBlendOnOverlap
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4859582672999789374, guid: 4a46fa73f5e7973479d58125277b0546,
-        type: 3}
-      propertyPath: m_UseNormalMap
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4859582672999789374, guid: 4a46fa73f5e7973479d58125277b0546,
-        type: 3}
-      propertyPath: m_LightType
-      value: 1
+      propertyPath: m_FalloffIntensity
+      value: 0.448
       objectReference: {fileID: 0}
     - target: {fileID: 4859582672999789374, guid: 4a46fa73f5e7973479d58125277b0546,
         type: 3}
@@ -588,16 +498,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Color.b
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4859582672999789374, guid: 4a46fa73f5e7973479d58125277b0546,
-        type: 3}
-      propertyPath: m_FalloffIntensity
-      value: 0.448
-      objectReference: {fileID: 0}
-    - target: {fileID: 4859582672999789374, guid: 4a46fa73f5e7973479d58125277b0546,
-        type: 3}
-      propertyPath: m_LightVolumeOpacity
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4859582672999789374, guid: 4a46fa73f5e7973479d58125277b0546,
         type: 3}
