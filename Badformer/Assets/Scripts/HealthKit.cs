@@ -16,12 +16,14 @@ public class HealthKit : MonoBehaviour {
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
-        audioSource.PlayOneShot(healthAudio);
-        if(bad) {
-            gm.SetHealth(-healthToAdd);
-        } else {
-            gm.SetHealth(healthToAdd);
+        if(collision.gameObject.layer == LayerMask.NameToLayer("Player")) {
+            audioSource.PlayOneShot(healthAudio);
+            if(bad) {
+                gm.SetHealth(-healthToAdd);
+            } else {
+                gm.SetHealth(healthToAdd);
+            }
+            Destroy(gameObject);
         }
-        Destroy(gameObject);
     }
 }

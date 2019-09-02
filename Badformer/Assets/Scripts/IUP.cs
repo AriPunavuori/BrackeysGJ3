@@ -12,11 +12,13 @@ public class IUP : MonoBehaviour {
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
-        if(bad) {
-            gm.SetLives(-livesToAdd);
-        } else {
-            gm.SetLives(livesToAdd);
+        if(collision.gameObject.layer == LayerMask.NameToLayer("Player")) {
+            if(bad) {
+                gm.SetLives(-livesToAdd);
+            } else {
+                gm.SetLives(livesToAdd);
+            }
+            Destroy(gameObject);
         }
-        Destroy(gameObject);
     }
 }

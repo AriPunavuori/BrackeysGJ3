@@ -14,8 +14,11 @@ public class Powerup : MonoBehaviour {
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
-        pc.EatShroom(ps);
-        gm.SetUIText(ps.ToString());
-        Destroy(gameObject);
+        if(collision.gameObject.layer == LayerMask.NameToLayer("Player")) {
+            Destroy(gameObject);
+            pc.EatShroom(ps);
+            gm.SetUIText(ps.ToString());
+            Destroy(gameObject);
+        }
     }
 }

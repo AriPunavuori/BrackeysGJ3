@@ -16,12 +16,14 @@ public class Pickable : MonoBehaviour {
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
-        audioSource.PlayOneShot(creditAudio);
-        if(bad) {
-            gm.SetScore(-scoreToAdd);
-        } else {
-            gm.SetScore(scoreToAdd);
+        if(collision.gameObject.layer == LayerMask.NameToLayer("Player")) {
+            audioSource.PlayOneShot(creditAudio);
+            if(bad) {
+                gm.SetScore(-scoreToAdd);
+            } else {
+                gm.SetScore(scoreToAdd);
+            }
+            Destroy(gameObject);
         }
-        Destroy(gameObject);
     }
 }

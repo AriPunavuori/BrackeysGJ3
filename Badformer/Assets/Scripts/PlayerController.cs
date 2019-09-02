@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour {
     float moveSpeed = 500f;
     float jumpForce = 30f;
     float groundSensorDepth = 1.5f;
-    float sensorShift = .75f;
+    float sensorShift = .5f;
 
     Animator animator;
     GameManager gm;
