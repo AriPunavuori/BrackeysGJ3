@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour {
     float moveSpeed = 500f;
     float jumpForce = 30f;
     float groundSensorDepth = 1.5f;
+    float sensorShift = .75f;
 
     Animator animator;
     GameManager gm;
@@ -59,8 +60,9 @@ public class PlayerController : MonoBehaviour {
     }
 
     private void FixedUpdate() {
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, groundSensorDepth, LayerMask.GetMask("Ground"));
-        if(hit.collider != null) {
+        RaycastHit2D hitLeft = Physics2D.Raycast(transform.position + Vector3.left * sensorShift, Vector2.down, groundSensorDepth, LayerMask.GetMask("Ground"));
+        RaycastHit2D hitRight = Physics2D.Raycast(transform.position + Vector3.right * sensorShift, Vector2.down, groundSensorDepth, LayerMask.GetMask("Ground"));
+        if(hitLeft.collider != null|| hitRight.collider != null) {
             onGround = true;
         } else {
             onGround = false;
@@ -70,6 +72,11 @@ public class PlayerController : MonoBehaviour {
             if(jump)
                 Jump();
         }     
+    }
+
+    private void OnDrawGizmosSelected() {
+        Debug.DrawLine(transform.position + Vector3.left * sensorShift, transform.position + (Vector3.left * sensorShift) + Vector3.down * groundSensorDepth);
+        Debug.DrawLine(transform.position + Vector3.right * sensorShift, transform.position + (Vector3.right * sensorShift) + Vector3.down * groundSensorDepth);
     }
 
     void Jump() {
