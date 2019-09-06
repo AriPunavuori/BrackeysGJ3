@@ -5,10 +5,10 @@ using UnityEngine;
 public class EnemyDrone : MonoBehaviour {
     public GameObject ammoPrefab;
 
-    public float FiringDist = 20f;
-    int ammoBurstAmount = 3;
+    float FiringDist = 15f;
+    int ammoBurstAmount = 5;
     int ammoAmount = 0;
-    float shotInterval = .2f;
+    float shotInterval = .1f;
     float firingInterval = 1.5f;
     float shotTimer;
     float firingTimer;

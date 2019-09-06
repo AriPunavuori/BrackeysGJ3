@@ -3,9 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class DroneAmmo : MonoBehaviour {
+
     public float ammoSpeed = 10f;
+    public GameObject fxRed;
+    public GameObject fxYellow;
 
     void Start() {
+        fxRed = transform.Find("ParticleFXRed").gameObject;
+        fxYellow = transform.Find("ParticleFXYellow").gameObject;
+
         Rigidbody2D rb = GetComponent<Rigidbody2D>();
         GameObject player = GameObject.Find("Player");
         Vector2 target = player.transform.position;
@@ -20,11 +26,15 @@ public class DroneAmmo : MonoBehaviour {
         if(collision.tag == "Player") {
             GameManager gm = FindObjectOfType<GameManager>();
             gm.SetHealth(-10);
+            fxRed.SetActive(true);
+            fxRed.transform.parent = null;
             Destroy(gameObject);
         } else {
-            print(collision.gameObject);
+            fxYellow.SetActive(true);
+            fxYellow.transform.parent = null;
             Destroy(gameObject);
         }
+
     }
 
 }
