@@ -9,7 +9,7 @@ public class DroneAmmo : MonoBehaviour {
         Rigidbody2D rb = GetComponent<Rigidbody2D>();
         GameObject player = GameObject.Find("Player");
         Vector2 target = player.transform.position;
-        Quaternion rotation = Quaternion.LookRotation(target, Vector2.up);
+        Quaternion rotation = Quaternion.LookRotation(target-(Vector2)transform.position, Vector2.up);
         transform.rotation = rotation;
         rb.isKinematic = false;
         Vector2 targetVector = target - (Vector2)transform.position;
@@ -20,6 +20,9 @@ public class DroneAmmo : MonoBehaviour {
         if(collision.tag == "Player") {
             GameManager gm = FindObjectOfType<GameManager>();
             gm.SetHealth(-10);
+            Destroy(gameObject);
+        } else {
+            print(collision.gameObject);
             Destroy(gameObject);
         }
     }
