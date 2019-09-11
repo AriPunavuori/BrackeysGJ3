@@ -92,9 +92,9 @@ MonoBehaviour:
   targetCompatibility: {fileID: 0}
   maxAcceleration: -2.5
   rotationSpeed: 360
-  slowdownDistance: 0.6
+  slowdownDistance: 3
   pickNextWaypointDist: 2
-  endReachedDistance: 5
+  endReachedDistance: 1.5
   alwaysDrawGizmos: 0
   slowWhenNotFacingTarget: 1
   whenCloseToDestination: 0
@@ -127,7 +127,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ammoPrefab: {fileID: 6269304492679080751, guid: b5676ea3a39c04777a52da0b591ec4b4,
     type: 3}
-  FiringDist: 10
+  dummyTarget: {fileID: 2272209216125583716, guid: 16570dd2c5ea543b2bab7a43b5afc607,
+    type: 3}
   inSight: 0
   startFiring: 0
 --- !u!1 &5027273351884219462
